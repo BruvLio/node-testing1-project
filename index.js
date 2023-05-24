@@ -44,12 +44,7 @@ function findLargestInteger(integers) {
 	let newArray = integers.map((element) => element.integer);
 	let result = Math.max(...newArray);
 	return result;
-	// return 9;
 }
-
-console.log(
-	findLargestInteger([{ integer: 1 }, { integer: 3 }, { integer: 2 }])
-);
 
 class Counter {
 	/**
@@ -58,6 +53,7 @@ class Counter {
 	 */
 	constructor(initialNumber) {
 		// ✨ initialize whatever properties are needed
+		this.count = initialNumber;
 	}
 
 	/**
@@ -72,8 +68,19 @@ class Counter {
 	 * counter.countDown() // returns 0
 	 * counter.countDown() // returns 0
 	 */
-	countDown() {
+	countDown(number) {
 		// ✨ implement
+		// 	let count = 0;
+		// 	for (let i = 0; i < number; i++) {
+		// 		count = number - 1;
+		// 	}
+		// 	return count;
+		// }
+		let count = number;
+		while (count <= number) {
+			count--;
+		}
+		return count;
 	}
 }
 
