@@ -15,7 +15,6 @@ function trimProperties(obj) {
 	return result;
 }
 
-console.log(trimProperties());
 /**
  * [Exercise 2] trimPropertiesMutation trims in place the properties of an object
  * @param {object} obj - an object with properties that are strings
@@ -42,7 +41,15 @@ function trimPropertiesMutation(obj) {
  */
 function findLargestInteger(integers) {
 	// ✨ implement
+	let newArray = integers.map((element) => element.integer);
+	let result = Math.max(...newArray);
+	return result;
+	// return 9;
 }
+
+console.log(
+	findLargestInteger([{ integer: 1 }, { integer: 3 }, { integer: 2 }])
+);
 
 class Counter {
 	/**
